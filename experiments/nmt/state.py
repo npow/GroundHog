@@ -244,8 +244,8 @@ def prototype_encdec_state():
 
     state = prototype_state()
 
-    state['target'] = ["%s/binarized_text.shuffled.fr.h5" % DATA_DIR]
-    state['source'] = ["%s/binarized_text.shuffled.en.h5" % DATA_DIR]
+    state['target'] = ["%s/binarized_text.shuf.fr.h5" % DATA_DIR]
+    state['source'] = ["%s/binarized_text.shuf.en.h5" % DATA_DIR]
     state['indx_word'] = "%s/ivocab.en.pkl" % DATA_DIR
     state['indx_word_target'] = "%s/ivocab.fr.pkl" % DATA_DIR
     state['word_indx'] = "%s/vocab.en.pkl" % DATA_DIR
