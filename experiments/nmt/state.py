@@ -1,3 +1,7 @@
+import os
+
+DATA_DIR = os.environ['HOME'] + '/europarl'
+
 def prototype_state():
     state = {}
 
@@ -240,12 +244,12 @@ def prototype_encdec_state():
 
     state = prototype_state()
 
-    state['target'] = ["/data/lisatmp3/chokyun/mt/vocab.unlimited/bitexts.selected/binarized_text.shuffled.fr.h5"]
-    state['source'] = ["/data/lisatmp3/chokyun/mt/vocab.unlimited/bitexts.selected/binarized_text.shuffled.en.h5"]
-    state['indx_word'] = "/data/lisatmp3/chokyun/mt/vocab.unlimited/bitexts.selected/ivocab.en.pkl"
-    state['indx_word_target'] = "/data/lisatmp3/chokyun/mt/vocab.unlimited/bitexts.selected/ivocab.fr.pkl"
-    state['word_indx'] = "/data/lisatmp3/chokyun/mt/vocab.unlimited/bitexts.selected/vocab.en.pkl"
-    state['word_indx_trgt'] = "/data/lisatmp3/chokyun/mt/vocab.unlimited/bitexts.selected/vocab.fr.pkl"
+    state['target'] = ["%s/binarized_text.shuffled.fr.h5" % DATA_DIR]
+    state['source'] = ["%s/binarized_text.shuffled.en.h5" % DATA_DIR]
+    state['indx_word'] = "%s/ivocab.en.pkl" % DATA_DIR
+    state['indx_word_target'] = "%s/ivocab.fr.pkl" % DATA_DIR
+    state['word_indx'] = "%s/vocab.en.pkl" % DATA_DIR
+    state['word_indx_trgt'] = "%s/vocab.fr.pkl" % DATA_DIR
 
     state['null_sym_source'] = 30000
     state['null_sym_target'] = 30000
